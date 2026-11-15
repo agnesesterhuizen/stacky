@@ -2,20 +2,21 @@
   "name": "stacky",
   "version": "0.1.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "watch": "rollup -c rollup.config.js -w",
-    "test": "jest"
+    "test": "npm run build && node --test test/**/*.test.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
     "@rollup/plugin-typescript": "^12.3.0",
-    "@types/jest": "^30.0.0",
-    "jest": "^30.5.1",
     "rollup": "^4.63.1",
-    "ts-jest": "^29.4.12",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3"
   }
